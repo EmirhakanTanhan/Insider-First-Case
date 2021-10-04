@@ -38,6 +38,7 @@ const jsEditor = CodeMirror.fromTextArea(jsEditorArea, {
     ...options
 });
 
+
 //Rendering history button with all saved templates
 renderHistoryComponent();
 //Initializing session autosave

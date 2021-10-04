@@ -1,11 +1,12 @@
 .main {
-  height: 100vh;
   width: 99%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 .main .tabs {
   padding: 5px 0;
+  border-bottom: 2px solid dimgray;
 }
 .main .content {
   height: 100%;
@@ -15,16 +16,26 @@
   height: 100%;
   transition: 0.5s;
 }
+.main .editor {
+  border-top: 2px solid dimgray;
+}
 .main .editor .options {
   padding: 5px 0;
 }
-.main .editor .editor-area ._js {
+.main .editor .editor-area .labels {
+  padding-left: 15px;
+  color: dimgray;
+}
+.main .editor .editor-area .labels .label-javascript {
+  padding-left: 15px;
+}
+.main .editor .editor-area .editors ._js {
   padding-right: 0;
 }
-.main .editor .editor-area ._html {
+.main .editor .editor-area .editors ._html {
   padding: 0;
 }
-.main .editor .editor-area ._css {
+.main .editor .editor-area .editors ._css {
   padding-left: 0;
 }
 

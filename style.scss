@@ -1,12 +1,13 @@
 
 .main {
-  height: 100vh;
   width: 99%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 
   .tabs {
     padding: 5px 0;
+    border-bottom: 2px solid dimgray;
   }
 
   .content {
@@ -20,6 +21,7 @@
   }
 
   .editor {
+    border-top: 2px solid dimgray;
 
     .options {
       padding: 5px 0;
@@ -27,14 +29,26 @@
 
     .editor-area {
 
-      ._js {
-        padding-right: 0;
-      }
-      ._html {
-        padding: 0;
+      .labels {
+        padding-left: 15px;
+        color: dimgray;
+
+        .label-javascript {
+          padding-left: 15px;
         }
-      ._css {
-        padding-left: 0;
+      }
+
+      .editors {
+
+        ._js {
+          padding-right: 0;
+        }
+        ._html {
+          padding: 0;
+        }
+        ._css {
+          padding-left: 0;
+        }
       }
     }
   }
