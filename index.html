@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insider Frontend Case</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--CodeMirror essentials-->
+    <script src="codeMirror/codemirror.js"></script>
+    <link rel="stylesheet" href="codeMirror/codemirror.css">
+    <!--CodeMirror modes-->
+    <script src="codeMirror/modes/javascript.js"></script>
+    <script src="codeMirror/modes/css.js"></script>
+    <script src="codeMirror/modes/xml.js"></script>
+    <!--CodeMirror addons edit-->
+    <script src="codeMirror/addons/edit/closebrackets.js"></script>
+    <script src="codeMirror/addons/edit/closetag.js"></script>
+    <script src="codeMirror/addons/edit/continuelist.js"></script>
+    <script src="codeMirror/addons/edit/matchbrackets.js"></script>
+    <script src="codeMirror/addons/edit/matchtags.js"></script>
+    <script src="codeMirror/addons/edit/trailingspace.js"></script>
+    <!--CodeMirror addons hint-->
+    <script src="codeMirror/addons/hint/show-hint.js"></script>
+    <link rel="stylesheet" href="codeMirror/addons/hint/show-hint.css">
+    <script src="codeMirror/addons/hint/css-hint.js"></script>
+    <script src="codeMirror/addons/hint/html-hint.js"></script>
+    <script src="codeMirror/addons/hint/xml-hint.js"></script>
+    <script src="codeMirror/addons/hint/javascript-hint.js"></script>
+    <!--CodeMirror addons lint-->
+    <script src="codeMirror/addons/lint/jshint.js"></script>
+    <script src="codeMirror/addons/lint/csslint.js"></script>
+    <script src="codeMirror/addons/lint/lint.js"></script>
+    <link rel="stylesheet" href="codeMirror/addons/lint/lint.css">
+    <script src="codeMirror/addons/lint/css-lint.js"></script>
+    <script src="codeMirror/addons/lint/javascript-lint.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+    <div class="tabs row justify-content-end">
+        <div class="history col-1">
+
+        </div>
+        <div class="save col-1">
+            <button id="saveButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#saveModal">Save</button>
+        </div>
+    </div>
+    <div class="content">
+        <iframe id="content-area"></iframe>
+    </div>
+    <div class="editor">
+        <div class="options row justify-content-end">
+            <div class="minimize col-1">
+                <button id="minimizeButton" type="button" class="btn btn-warning">Minimize</button>
+            </div>
+            <div class="run col-1">
+                <button id="runButton" type="button" class="btn btn-success">Run</button>
+            </div>
+        </div>
+        <div class="editor-area">
+            <div class="row">
+                <div class="_js col"><textarea id="javascriptEditor"></textarea></div>
+                <div class="_html col"><textarea id="htmlEditor"></textarea></div>
+                <div class="_css col"><textarea id="cssEditor"></textarea></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="saveModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Save your editor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="editor-title" class="col-form-label">Title:</label>
+                    <input type="text" required class="form-control" id="editor-title">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="saveEditor()">Save editor</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="utils.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

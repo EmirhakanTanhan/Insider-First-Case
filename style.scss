@@ -1,0 +1,41 @@
+
+.main {
+  height: 100vh;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+
+  .tabs {
+    padding: 5px 0;
+  }
+
+  .content {
+    height: 100%;
+
+    #content-area {
+      width: 100%;
+      height: 100%;
+      transition: .5s;
+    }
+  }
+
+  .editor {
+
+    .options {
+      padding: 5px 0;
+    }
+
+    .editor-area {
+
+      ._js {
+        padding-right: 0;
+      }
+      ._html {
+        padding: 0;
+        }
+      ._css {
+        padding-left: 0;
+      }
+    }
+  }
+}

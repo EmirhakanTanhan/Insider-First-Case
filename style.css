@@ -1,0 +1,31 @@
+.main {
+  height: 100vh;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+}
+.main .tabs {
+  padding: 5px 0;
+}
+.main .content {
+  height: 100%;
+}
+.main .content #content-area {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.main .editor .options {
+  padding: 5px 0;
+}
+.main .editor .editor-area ._js {
+  padding-right: 0;
+}
+.main .editor .editor-area ._html {
+  padding: 0;
+}
+.main .editor .editor-area ._css {
+  padding-left: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
